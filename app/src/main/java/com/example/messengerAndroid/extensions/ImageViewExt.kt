@@ -7,7 +7,7 @@ import com.example.messengerAndroid.data.contactsRepository.contactModel.User
 
 fun ImageView.addPhoto(user: User) {
     if (user.photo.isNotBlank()) {
-        Glide.with(this.context)
+        Glide.with(this)
             .load(user.photo)
             .circleCrop()
             .placeholder(R.drawable.ic_baseline_sentiment_very_satisfied_24)
@@ -18,9 +18,9 @@ fun ImageView.addPhoto(user: User) {
     }
 }
 
-fun ImageView.cropPhoto() {
-    Glide.with(this.context)
-        .load(R.drawable.babyyoda)
+fun ImageView.cropPhoto(res: Int) {
+    Glide.with(this)
+        .load(res)
         .circleCrop()
         .placeholder(R.drawable.ic_baseline_sentiment_very_satisfied_24)
         .error(R.drawable.ic_baseline_sentiment_very_satisfied_24)

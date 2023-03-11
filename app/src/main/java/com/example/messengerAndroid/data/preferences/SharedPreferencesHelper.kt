@@ -8,7 +8,7 @@ import com.example.messengerAndroid.utils.Constants.USER_NAME_KEY
 
 object SharedPreferencesHelper {
 
-    lateinit var prefs: SharedPreferences
+    private lateinit var prefs: SharedPreferences
 
     fun init(context: Context) {
         prefs = context.getSharedPreferences(APP_PREFERENCES, Context.MODE_PRIVATE)

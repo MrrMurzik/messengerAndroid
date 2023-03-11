@@ -3,7 +3,7 @@ package com.example.messengerAndroid.ui.myContacts.contactsViewModel.factory
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.example.messengerAndroid.ui.myContacts.contactsViewModel.ContactsViewModel
-import com.example.messengerAndroid.ui.myContacts.contactsViewModel.UsersDataSelector
+import com.example.messengerAndroid.ui.myContacts.contactsViewModel.contract.UsersDataSelector
 
 @Suppress("UNCHECKED_CAST")
 class ContactsViewModelFactory(private val usersDataSelector: UsersDataSelector) : ViewModelProvider.Factory {

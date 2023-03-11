@@ -56,6 +56,7 @@
     <string name="permission_denied_button">Permission denied</string>
     <string name="reasonable_permission_text">You need to confirm permission to import your contacts into app\nWe dont collect your personal data.\nDude, we dont have even server...</string>
     <string name="apply_permission">Apply permission</string>
+    <string name="add_photo">Add photo</string>
 
 
 </resources>

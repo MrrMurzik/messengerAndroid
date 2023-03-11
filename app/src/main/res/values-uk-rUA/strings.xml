@@ -53,5 +53,6 @@
     <string name="opss">Упс..</string>
     <string name="permission_denied_button">Дозвіл скасовано</string>
     <string name="reasonable_permission_text">Вам необхідно надати дозвіл щоб імпортувати контакти в додаток\nМи не збираємо ваші приватні дані.\nКозаче, в нас навіть серверу немає...</string>
-    <string name="apply_permission">Apply permission</string>
+    <string name="apply_permission">Надати дозвіл</string>
+    <string name="add_photo">Додати фото</string>
 </resources>

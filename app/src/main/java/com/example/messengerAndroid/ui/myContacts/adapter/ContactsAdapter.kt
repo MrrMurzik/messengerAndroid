@@ -2,22 +2,11 @@ package com.example.messengerAndroid.ui.myContacts.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.messengerAndroid.databinding.ItemContactBinding
 import com.example.messengerAndroid.extensions.addPhoto
 import com.example.messengerAndroid.data.contactsRepository.contactModel.User
-
-
-class UserItemDiffCallback : DiffUtil.ItemCallback<User>() {
-    override fun areItemsTheSame(oldItem: User, newItem: User): Boolean =
-        oldItem.id == newItem.id
-
-    override fun areContentsTheSame(oldItem: User, newItem: User): Boolean =
-        oldItem == newItem
-}
-
 
 class ContactsAdapter (private val actionListener: UserActionListener)
     : ListAdapter<User, ContactsAdapter.ContactsViewHolder>(UserItemDiffCallback()) {

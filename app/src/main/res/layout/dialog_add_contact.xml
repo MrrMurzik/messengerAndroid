@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.example.messengerAndroid.ui.customView.DismissableKeyboardConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -8,13 +8,38 @@
     android:paddingStart="@dimen/bigPadding"
     android:paddingEnd="@dimen/bigPadding"
     android:paddingTop="@dimen/defaultPadding"
-    android:paddingBottom="@dimen/defaultPadding">
+    android:paddingBottom="@dimen/defaultPadding"
+    android:background="?attr/colorPrimary">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageViewAvatar"
+        android:layout_width="@dimen/icon_size"
+        android:layout_height="@dimen/icon_size"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/textViewAddPhoto"
+        app:layout_constraintVertical_chainStyle="packed"
+        android:src="@drawable/ic_baseline_sentiment_very_satisfied_24"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewAddPhoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_photo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageViewAvatar"
+        app:layout_constraintBottom_toTopOf="@id/textInputName"
+        android:textColor="?attr/colorOnPrimary"
+        android:layout_marginBottom="@dimen/bigMargin"/>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewAddPhoto"
+        app:layout_constraintBottom_toTopOf="@id/textInputJob"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:hint="@string/enter_name_hint">
@@ -34,6 +59,8 @@
         app:layout_constraintTop_toBottomOf="@id/textInputName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/buttonCancel"
+        android:layout_marginBottom="@dimen/bigMargin"
         android:hint="@string/enter_job_hint">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -44,4 +71,28 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-</LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/action_cancelled"
+        app:layout_constraintTop_toBottomOf="@id/textInputJob"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/buttonConfirm"/>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonConfirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/action_confirmed"
+        app:layout_constraintTop_toTopOf="@id/buttonCancel"
+        app:layout_constraintBottom_toBottomOf="@id/buttonCancel"
+        app:layout_constraintStart_toEndOf="@id/buttonCancel"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
+</com.example.messengerAndroid.ui.customView.DismissableKeyboardConstraintLayout>
